@@ -3,11 +3,12 @@ import './App.css';
 
 import { useState } from 'react';
 import ColorPicker from './ColorPicker';
+import FakeDiv from './FakeDiv';
 
 function App() {
-  const [red, setRed] = useState(255); // red
+  const [red, setRed] = useState(25); // red
   const [green, setGreen] = useState(255); // green
-  const [blue, setBlue] = useState(255); // blue
+  const [blue, setBlue] = useState(25); // blue
 
   // fakey-changey the "body" (but really the App component)
   // CSS-in-JS
@@ -16,8 +17,12 @@ function App() {
   };
 
   return (
-    <div className="fakey-body" style={appStyle}>
-
+    <FakeDiv 
+      className="fakey-body" 
+      style={appStyle}
+      children="whatevs what kids"
+    >
+ 
       <ColorPicker
         label="Red"
         color={red}
@@ -37,7 +42,10 @@ function App() {
         color={blue}
         setColor={setBlue}
       />      
-    </div>
+   
+   
+    </FakeDiv>
+   
   );
 }
 

@@ -20,7 +20,6 @@ function App() {
     <FakeDiv 
       className="fakey-body" 
       style={appStyle}
-      children="whatevs what kids"
     >
  
       <ColorPicker
